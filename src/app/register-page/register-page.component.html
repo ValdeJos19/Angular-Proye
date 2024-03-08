@@ -1,0 +1,40 @@
+
+  <body>
+    <div class="lg_flexbox">
+      <app-barra-late></app-barra-late>
+      <div class="lg_lado_b">
+        <div class="lg_flex">
+          <h2 class="lg_titulo_sesion">
+            Crear
+            <p>Cuenta</p>
+          </h2>
+          <form action="post" class="lg_flex">
+            <input id="nombre" type="text" placeholder="Ingresa tus nombres" class="lg_input" />
+            <input id="apellido" type="text" placeholder="Ingresa tus apellidos" class="lg_input" />
+            <input id="dni" type="text" placeholder="Ingresa tu dni" class="lg_input" />
+            <input
+              id="fecha"
+              type="text"
+              placeholder="Ingresa fecha de nacimiento"
+              class="lg_input"
+            />
+            <input
+              id="pass1"
+              type="passsword"
+              minlength="8"
+              placeholder="Ingresa contraseña"
+              class="lg_input"
+            />
+            <input
+              id="pass2"
+              type="password"
+              minlength="8"
+              placeholder="Repite la contraseña que ingresaste"
+              class="lg_input"
+            />
+            <a class="lg_btn_crear" onclick="registrar()">Crear cuenta</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>

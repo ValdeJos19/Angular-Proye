@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Hoja de estilos para la página de home*/
+
+/*Estilos del Header*/
+.NavegationBar{
+    display: grid;
+    gap: 3px
+}
+/*Para primera fila*/
+.firstrow{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 2fr 2fr;
+    margin: 4px;
+    gap: 0.5%;
+}
+.firstrow h3{
+    margin: 4%;
+    align-self: center;
+    
+    font-size: small;
+}
+.firstrow-item{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    text-align: center;
+}
+.firstrow-item img{
+    align-self: center;
+    height: 25px;
+}
+.firstrow-item span{
+    align-self: center;
+}
+.firstrow-item a{
+    color: Black;
+}
+.firstrow-itemfill{
+    border-radius: 10px;
+    background-color: rgb(9, 181, 219);
+    margin-left: 2%;
+    margin-right: 2%;
+    display:grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    color: white;
+}
+.firstrow-itemfill span{
+    align-self: center;
+    justify-self: center;
+}
+/*Segunda fila*/
+.secondrow {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin: 4px;
+    gap: 5%;
+}
+.secondrow h3{
+    
+    font-weight: light;
+    font-size: small;
+    margin: 0%;
+}
+.secondrowh3light{
+    font-weight: lighter;
+}
+/*Tercera fila*/
+.thirdrow {
+    display: grid;
+    margin: 4px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    
+    font-size: smaller;
+}
+.thirdrow ul, ol, li, a {
+    list-style:none;
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+.menu {
+    display: grid;
+    grid-template-columns: auto repeat(5, 1fr);
+    gap: 5%;
+    height: 35px;
+}
+.homebutton {
+    text-align: left;
+    padding-left: 5px;
+}
+.thirdrowfill {
+    display: grid;
+    background-color: #00abeb;
+    height: 100%;
+}
+.thirdrownormal {
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.thirdrownormal span{
+    text-align: left;
+}
+.thirdrownormal a{
+    text-align: right;
+}
+.thirdrownormal span:hover{
+    color: #00abeb;
+}
+.thirdrownormal a:hover{
+    color: #00abeb;
+}
+.homebutton a:hover{
+    color: #00abeb;
+}
+.thirdrowfill a:hover{
+    color: black;
+}
+/*Hoja de estilos para la página de home*/
+
+.divCuentas {
+    text-align: center;
+    border: 2px solid;
+    border-color: black;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    max-width: 400px;
+    width: 100%;
+    justify-content: space-evenly;
+    flex: 1 1 auto;
+    margin-top: 5%;
+}
+
+.separacion {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.aiz--title{
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 30px;
+}
+.aiz {
+    text-align: left;
+    margin-left: 30px;
+}
+.buttonMovimiento {
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
+    padding: 1em 2em;
+    background: black;
+    color: white;
+    border-radius: 2em;
+    border:none;
+    font-weight: bold;
+    cursor: pointer;
+}
