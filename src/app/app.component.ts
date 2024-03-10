@@ -7,18 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'workspace';
-   Reto(input: number): string {
-    if (input < 0) {  
-      
-      return "Input must be non-negative";
+  Reto(input: any): string {
+    if (typeof input !== 'number') {
+      return "El valor introducido no es un número";
+    } else if (input <= 0 || input >= 100) {
+      return "El número introducido debe ser mayor que 0 y menor que 100";
     } else if (input % 3 === 0 && input % 5 === 0) {
-      return "fizzBuzz";
+      return "FizzBuzz";
     } else if (input % 3 === 0) {
       return "Fizz";
     } else if (input % 5 === 0) {
       return "Buzz";
     } else {
-      return "not a fizzbuzz number";  
+      return "No es un número que sea multiplo de 3 y 5";  
     }
   }
 }
