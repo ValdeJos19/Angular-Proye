@@ -57,7 +57,7 @@ describe('AppComponent', () => {
   it(`Debería de dar como respuesta "Las dos palabras son iguales", al introducir dos palabras iguales`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.Reto2("uno", "uno")).toEqual("Las dos palabras son iguales o una tiene  mayúscula. Verificar!");
+    expect(app.Reto2("uno", "uno")).toEqual(false);
   });
   it(`Debería de dar como respuesta false , al introducir dos palabras diferentes pero no son anagromas`, () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -67,14 +67,28 @@ describe('AppComponent', () => {
   it(`Debería de dar como respuesta true , al introducir dos palabras diferentes anagromas`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.Reto2("cara", "arca")).toEqual(true);
+    expect(app.Reto2("ca   ra", "ar   ca")).toEqual(true);
   });
-  it(`Debería de dar como respuesta true , al introducir dos palabras diferentes anagromas`, () => {
+  it(`Debería de dar como respuesta "Las dos palabras son iguales o una tiene  mayúscula. Verificar!" , al introducir dos palabras diferentes pero con mayúsculas`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.Reto2("Cara", "arca")).toEqual("Las dos palabras son iguales o una tiene  mayúscula. Verificar!");
+    expect(app.Reto2("Cara", "arca")).toEqual(false);
+  });
+  it(`Debería de dar como respuesta "Las dos palabras son iguales o una tiene  mayúscula. Verificar!" , al introducir dos palabras diferentes pero con mayúsculas`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.Reto2("Cara", "Arca")).toEqual(false);
   });
 
+  it(`ed`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.isPrimeFibonacciEven(7)).toEqual("Hola es primo");
+  });
+ 
+
+
+ 
 
 
 

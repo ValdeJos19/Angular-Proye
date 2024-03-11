@@ -24,24 +24,53 @@ export class AppComponent {
   }
 
 
-  Reto2(palabraA:string, palabraB:string):any{
+  Reto2(palabraA:string, palabraB:string):boolean{
     if (palabraA !== palabraB && palabraA===palabraA.toLowerCase() && palabraB===palabraB.toLowerCase()){
-      var palabraAs=palabraA.split("");
-      var palabraBs=palabraB.split("");
+      
+      var palabraAs=palabraA.replace(/\s/g, '').split("");
+      var palabraBs=palabraB.replace(/\s/g, '').split("");
       var palabraAsor=palabraAs.sort();
       var palabraBsor=palabraBs.sort()
       
-      if (palabraAsor.join("")===palabraBsor.join("")){
-        return true;
-
-      }else{
-        return false;
-      }
+      return palabraAsor.join("")===palabraBsor.join("")
       
       
     }else{
-      return "Las dos palabras son iguales o una tiene  mayúscula. Verificar!";
+      return false;
     }
   }
+  isPrimeFibonacciEven(n: number): any {
+    function isPrime(num: number): any {
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) return "no es primo";
+      }
+      return "es primo";
+    }
+    function isFibonacci(num: number): any {
+      const fibonacci: number[] = [0, 1];
+      let i = 2;
+      while (fibonacci[i - 1] < num) {
+        fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+        i += 1;
+      }
+      if (fibonacci.includes(num) === true){
+        return "es fibonacci"
+      } else{
+        return "no es fiboncacci"
+      }
+    }
+    function isEven(num: number): any {
+      if (num % 2 === 0){
+        return " y es par"
+      } else{
+        " y es impar"
+      }
+    }
+    var evn= isEven(n);
+    var fibo = isFibonacci(n);
+    var prime= isPrime(n);
+    return n + " "+ prime + ", "+ fibo + evn;
+  }
+  
  
 }

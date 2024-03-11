@@ -1,0 +1,73 @@
+
+
+    <div *ngIf="XD === true" class="lg_lado_b">
+      <div class="lg_flex">
+        <h2 class="lg_titulo_sesion">
+          Inicio de
+          <p>sesión</p>
+        </h2>
+        <form class="lg_flex" id="formulario_ini">
+          <input
+            type="email"
+            placeholder="Ingresa tu correo electronico"
+            class="lg_input"
+            id="form_email"
+          />
+          <input
+            type="password"
+            placeholder="Ingresa tu clave de internet"
+            class="lg_input"
+            id="form_pass"
+          >
+
+          <p class="lg_problemas">
+            ¿Tienes problemas con tu cuenta?<a href="#"> Recuperar contraseña</a>
+          </p>
+        </form>
+        <input
+          type="submit"
+          class="lg_btn_iniciar"
+          value="Iniciar sesion"
+          onclick="validarEmail()"
+        />
+        <!-- <p id="mensaje"></p> -->
+      </div>
+    </div>
+
+
+
+
+    <div *ngIf="XD === false" class="lg_lado_b">
+        <div class="lg_flex">
+          <h2 class="lg_titulo_sesion">
+            Crear
+            <p>Cuenta</p>
+          </h2>
+          <form action="post" class="lg_flex">
+            <input id="nombre" type="text" placeholder="Ingresa tus nombres" class="lg_input" />
+            <input id="apellido" type="text" placeholder="Ingresa tus apellidos" class="lg_input" />
+            <input id="dni" type="text" placeholder="Ingresa tu dni" class="lg_input" />
+            <input
+              id="fecha"
+              type="text"
+              placeholder="Ingresa fecha de nacimiento"
+              class="lg_input"
+            />
+            <input
+              id="pass1"
+              type="passsword"
+              minlength="8"
+              placeholder="Ingresa contraseña"
+              class="lg_input"
+            />
+            <input
+              id="pass2"
+              type="password"
+              minlength="8"
+              placeholder="Repite la contraseña que ingresaste"
+              class="lg_input"
+            />
+            <a class="lg_btn_crear" onclick="registrar()">Crear cuenta</a>
+          </form>
+        </div>
+      </div>
