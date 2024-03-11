@@ -52,6 +52,31 @@ describe('AppComponent', () => {
     expect(app.Reto("uno")).toEqual("El valor introducido no es un número");
   });
 
+  ///////////////////////////////////////////////////////////////////////////////////
+
+  it(`Debería de dar como respuesta "Las dos palabras son iguales", al introducir dos palabras iguales`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.Reto2("uno", "uno")).toEqual("Las dos palabras son iguales o una tiene  mayúscula. Verificar!");
+  });
+  it(`Debería de dar como respuesta false , al introducir dos palabras diferentes pero no son anagromas`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.Reto2("uno", "dos")).toEqual(false);
+  });
+  it(`Debería de dar como respuesta true , al introducir dos palabras diferentes anagromas`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.Reto2("cara", "arca")).toEqual(true);
+  });
+  it(`Debería de dar como respuesta true , al introducir dos palabras diferentes anagromas`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.Reto2("Cara", "arca")).toEqual("Las dos palabras son iguales o una tiene  mayúscula. Verificar!");
+  });
+
+
+
 
 });
 
